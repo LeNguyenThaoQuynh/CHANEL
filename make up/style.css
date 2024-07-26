@@ -1,0 +1,485 @@
+/*LINK FONT CHỮ*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.container {
+  background-color: #fff;
+  height: auto;
+  color: #000;
+}
+
+.content-container {
+  margin-top: 0px;
+}
+
+/* ---HEADER--- */
+.content-header {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.logo {
+  text-transform: uppercase; /*In hoa toàn bộ*/
+  justify-content: center;
+  padding: 25px 0;
+  margin: 0 auto 0;
+  width: 25%;
+  text-align: center;
+}
+
+.logo span {
+  width: 100%;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 3.5px; /*Khoảng cách giữa các chữ trong 1 từ*/
+  margin-bottom: 10px;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  color: #000;
+  width: 100%;
+  justify-content: center;
+}
+
+.search {
+  margin-right: 15px;
+}
+
+
+/* ----NAVBAR----*/
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 20px 0;
+  font-size: 15px;
+  font-weight: bolder;
+  position: relative;
+}
+
+.nav-item {
+  position: relative;
+  margin-right: auto; /*Tự động căn khoảng cách với từ kế tiếp*/
+  margin-left: auto;
+  letter-spacing: 1.5px;
+}
+
+/*Khi rê chuột lên navbar thì sẽ có hiệu ứng là một đường gạch nằm ở đáy của phần tử đó
+    ::before tạo một phần tử giả trước nội dung của phần tử .nav-item*/
+.nav-item:hover::before {
+  content: '';  /*phần tử giả không chứa văn bản, nhưng có kiểu dáng và kích thước*/
+  position: absolute;
+  bottom: -20px;  /*Khoảng cách từ đáy của nav.item đến đáy của phần tử giả*/
+  left: 0;
+  background-color: #000;
+  height: 3px;
+  width: 100%;  /*Chiều rộng = nav.item*/
+  transition: width 0.3s ease, background-color 0.3s ease;  /*Chuyển tiếp trong 0,3 giây với hiệu ứng ease*/
+}
+
+/*Nội dung của Trang điểm*/
+.content-main {
+  width: 100%;
+  height: auto;
+}
+
+.container-featured {
+  height: 1200px;
+}
+
+.featured {
+  color: #fff;
+  height: 600px;
+  display: flex;
+  flex-direction: column; /*nội dung trải dọc từ trên xuống*/
+  align-items: center;
+  position: relative;
+  background-color: #0B2759;
+}
+
+.text-featured {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35%;
+  font-size: 25px;
+  letter-spacing: 3.5px;
+  font-weight: bold;
+}
+
+.images-featured {
+  position: absolute;
+  top: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-text-images-featured {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70%;
+  justify-content: center;
+  color: #344992;
+}
+
+.container-text-images-featured .text-images-featured {
+  width: 45vw;
+  text-align: center;
+  font-size: 15px;
+}
+
+.btn-featured {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #344992;
+  margin: 30px 0;
+  position: relative;
+  padding: 5px 0;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn-featured::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #344992;
+  height: 1px;
+}
+
+.btn-featured ion-icon {
+  font-size: 17px;
+}
+
+/* container-product */
+.content-product {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.background-product-left-1,
+.background-product-right-1,
+.background-product-left-1 .img-product-01 {
+  width: 100%;
+  height: 100%;
+}
+
+.background-product-right-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #344992;
+}
+
+.background-product-right-1 img {
+  width: 350px;
+}
+
+.background-product-right-1 .title-product {
+  font-size: 30px;
+  opacity: 0.9;
+  text-align: center;
+  padding: 20px 0;
+  letter-spacing: 3.5px;
+}
+
+.background-product-right-1 .text-product {
+  font-size: 17px;
+  text-align: center;
+  padding: 20px 0;
+  width: 35vw;
+}
+
+/* phần background-02 */
+.background-02 {
+  width: 100%;
+  color: #344992;
+}
+
+.background-02 img {
+  width: 100%;
+}
+
+.content-background-02 {
+  width: 100%;
+}
+
+.featured-background-02 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.featured-background-02 .title-background-02 {
+  padding: 15px 0;
+  font-size: 30px;
+  opacity: 0.8;
+  letter-spacing: 3.5px;
+}
+
+.featured-background-02 .text-background-02 {
+  font-size: 17px;
+  width: 45vw;  /*vw 1% chiều rộng cửa sổ của trình duyệt*/
+  text-align: center;
+}
+
+.background-02-video {
+  width: 100%;
+  color: #344992;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-02-video .title-video {
+  padding: 15px 0;
+  font-size: 30px;
+  opacity: 0.8;
+  letter-spacing: 3.5px;
+}
+
+.background-02-video img {
+  width: 40vw;
+}
+
+
+/* BỘ SƯU TẬP (MẤY SẢN PHẨM Ở DƯỚI) */
+.containner-collection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  margin-top: 40px;
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*Tiêu đề BST*/
+.title-collection {
+  padding: 15px 0;
+  font-size: 30px;
+  opacity: 0.8;
+  letter-spacing: 3.5px;
+  margin-bottom: 60px;
+  margin-top: 50px;
+  color: #344992;
+}
+
+.collection-product {
+  display: grid;  /*Định dạng theo dạng lưới*/
+  grid-template-columns: repeat(3, 1fr);
+  /*dùng repeat để thực hiện 3 lần. '1fr' là đơn vị phân phối không gian trong grid, nghĩa là mỗi cột sẽ chiếm 1/3 chiều rộng của grid container, chia đều cho 3 cột*/
+  gap: 10px;
+  margin-bottom: 100px;
+}
+
+.background-product {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.background-product img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.background-product .image-container {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+/*Hiệu ứng gạch dưới hình sản phẩm khi rê chuột vô*/
+.background-product .image-container:hover::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+}
+
+.content-collection-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-collection-product .title-collection-product {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+/* ----FOOTER----*/
+.footer {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #fff ;
+}
+
+.content-footer {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.grid-footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+   /*dùng repeat để thực hiện 4 lần. '1fr' là đơn vị phân phối không gian trong grid, nghĩa là mỗi cột sẽ chiếm 1/4 chiều rộng của grid container, chia đều cho 4 cột*/
+  text-transform: uppercase;  /*In hoa toàn bộ chữ*/
+  font-size: 15px;
+}
+
+.content-footer .logo-footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 100px 0;
+  font-size: 40px;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+
+}
+
+.list-item {
+  margin-top: 10px;
+}
+
+.list-item .item {
+  color: #d1d1d1d1;
+  font-weight: 300;
+  padding: 5px 0;
+}
+
+.list-item .item span {
+  cursor: pointer;
+  position: relative;
+}
+
+/*Hiệu ứng gạch chân khi rê chuột vô danh mục trong footer*/
+.list-item .item span:hover::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #d1d1d1d1;
+  height: 1px;
+}
+
+.background-grid {
+  height: 360px;
+  border-bottom: 1px solid #d1d1d1d1;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+
+.title-background {
+  font-size: 14px;
+}
+
+
+/* PHẦN HOME */
+.content-main .img-001 {
+  width: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+}
+
+.background-001 {
+  position: relative;
+  color: #fff;
+  text-transform: uppercase;
+  height: auto;
+}
+
+.background-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 70%;
+  left: 0;
+  right: 0;
+}
+
+.background-text .text-mini {
+  font-size: 15px;
+}
+
+.background-text .desc-background {
+  font-size: 30px;
+  width: 600px;
+  text-align: center;
+  letter-spacing: 3.5px;
+}
+
+.background-text .btn-background {
+  padding: 15px;
+  font-size: 12px;
+  color: #0B2759;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  border: 1px solid #fff;
+  background-color: #fff;
+  cursor: pointer;  /*Thay đổi hình dạng con trỏ thành hình bàn tay*/
+  margin-top: 20px;
+}
+
+.background-text .btn-background:hover {
+  background-color: #eee;
+}
+
